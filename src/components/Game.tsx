@@ -12,9 +12,11 @@ const Game: React.FC = () => {
 	if (!gameCTX) return;
 
 	return (
-		<div className="h-screen w-screen bg-mist-900">
+		<div
+			className={`h-screen w-screen ${gameCTX.isFinished ? "bg-green-600" : " bg-mist-900"}`}
+		>
 			<div>
-				<Heading restartGame={gameCTX?.newRandomNumber} />
+				<Heading restartGame={gameCTX.newRandomNumber} />
 				<Title answer={gameCTX.randomNumber} isFinished={gameCTX.isFinished} />
 			</div>
 
@@ -24,7 +26,7 @@ const Game: React.FC = () => {
 					score={gameCTX.score}
 					newScore={gameCTX.newScore}
 					newHighScore={gameCTX.newHighScore}
-					gameFinished={gameCTX.gameFinished}
+					setIsFinished={gameCTX.setIsFinished}
 					setCheckResult={gameCTX.setCheckResult}
 				/>
 				<Score

@@ -6,11 +6,9 @@ const CheckNumber: React.FC<CheckNumberResult> = ({
 	score,
 	newScore,
 	newHighScore,
-	gameFinished,
+	setIsFinished,
 	setCheckResult,
 }) => {
-	console.log("CheckNumber.tsx Rerendered");
-
 	const inputRef = useRef<HTMLInputElement>(null);
 
 	const handleInput = (event: React.SyntheticEvent<HTMLFormElement>): void => {
@@ -25,9 +23,11 @@ const CheckNumber: React.FC<CheckNumberResult> = ({
 			setCheckResult("It is too LOW");
 		} else if (value === randomNumber) {
 			newHighScore(score);
-			setCheckResult(`You Won! The Number was ${randomNumber}`);
-			gameFinished(true);
+			setCheckResult(`🎉🎊 You Won! The Number was ${randomNumber} 🎉🎊`);
+			setIsFinished(true);
 		}
+
+		if (inputRef.current?.value) inputRef.current.value = "";
 	};
 
 	return (

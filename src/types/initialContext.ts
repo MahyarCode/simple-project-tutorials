@@ -6,7 +6,7 @@ export interface InitialContext {
 	randomNumber: number;
 	newRandomNumber: () => void;
 	isFinished: boolean;
-	gameFinished: (condition: boolean) => void;
+	setIsFinished: (condition: boolean) => void;
 	checkResult: string;
 	setCheckResult: (result: string) => void;
 }
@@ -22,6 +22,6 @@ export interface CheckNumberResult {
 	score: number;
 	newScore: (score: number) => void;
 	newHighScore: (highScore: number) => void;
-	gameFinished: (condition: boolean) => void;
+	setIsFinished: (condition: boolean) => void;
 	setCheckResult: (result: string) => void;
 }

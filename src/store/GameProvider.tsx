@@ -25,9 +25,6 @@ export const GameProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 		setScore(20);
 		setCheckResult("Start Guessing...");
 	}
-	function gameFinished(condition: boolean): void {
-		setIsFinished(condition);
-	}
 
 	const gameCTX = {
 		score,
@@ -37,12 +34,10 @@ export const GameProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 		randomNumber,
 		newRandomNumber,
 		isFinished,
-		gameFinished,
+		setIsFinished,
 		checkResult,
 		setCheckResult,
 	};
-
-	console.log("GameContext.tsx Rerendered");
 
 	return <GameInitialContext.Provider value={gameCTX}>{children}</GameInitialContext.Provider>;
 };

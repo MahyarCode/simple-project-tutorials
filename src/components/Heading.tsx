@@ -1,7 +1,6 @@
 import React from "react";
 
 const Heading: React.FC<{ restartGame: () => void }> = ({ restartGame }) => {
-	console.log("Heading.tsx Rerendered");
 	return (
 		<>
 			<div className="flex justify-between">

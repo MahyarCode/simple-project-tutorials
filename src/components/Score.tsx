@@ -2,7 +2,6 @@ import React from "react";
 import type { ScoreBoard } from "../types/initialContext";
 
 const Score: React.FC<ScoreBoard> = ({ score, highScore, checkResult }) => {
-	console.log("Score.tsx Rerendered");
 
 	return (
 		<div className="ml-12">
