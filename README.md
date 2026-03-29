@@ -15,7 +15,7 @@ A game web app built with React and TypeScript for entertainment.
 1. Clone the repository
 
 ```bash
-git clone https://github.com/MahyarCode/guess-the-number-game/.git
+git clone https://github.com/MahyarCode/guess-the-number-game.git
 ```
 
 2. Navigate to the project
