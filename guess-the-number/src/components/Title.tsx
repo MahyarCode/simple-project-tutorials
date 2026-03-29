@@ -1,6 +1,8 @@
 import React from "react";
 
 const Title: React.FC<{ answer: number; isFinished: boolean }> = ({ answer, isFinished }) => {
+	console.log("Title.tsx Rerendered");
+
 	return (
 		<>
 			<div className="mb-24">
